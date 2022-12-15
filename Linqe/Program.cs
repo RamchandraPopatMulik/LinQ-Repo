@@ -24,8 +24,8 @@ namespace Linqe
 
             Management management = new Management();
             //management.ToGetTopThreeRecords(productreviewList);
-            management.GetAllRecordsByRatingAndId(productreviewList);
-
+            // management.GetAllRecordsByRatingAndId(productreviewList);
+            management.RetriveCountOfRecords(productreviewList);
         }
     }
 }

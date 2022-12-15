@@ -43,5 +43,14 @@ namespace Linqe
                                   $" isLike    : {list.IsLike}\n");
             }
         }
+        public void RetriveCountOfRecords(List<ProductReview> productreviewList)
+        {
+            var recordeData = productreviewList.GroupBy(x=>x.ProductID).Select(x=>new { ProductID = x.Key,Count  =x.Count()});
+            foreach (var list in recordeData)
+            {
+                Console.WriteLine($" ProductID : {list.ProductID}\n" +
+                                  $" Count   : {list.Count}\n" );
+            }
+        }
     }
 }
