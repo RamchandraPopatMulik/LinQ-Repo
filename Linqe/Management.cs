@@ -61,5 +61,17 @@ namespace Linqe
                                   $" Review  : {list.Review}\n");
             }
         }
+        public void SkipTopFive(List<ProductReview> productreviewList)
+        {
+            var recordeData = (from list in productreviewList orderby list.Rating descending select list);
+            foreach (var list in recordeData.Skip(5))
+            {
+                Console.WriteLine($" ProductID : {list.ProductID}\n" +
+                                   $" UserID    : {list.UserID}\n" +
+                                   $" Rating    : {list.Rating}\n" +
+                                   $" Review    : {list.Review}\n" +
+                                   $" isLike    : {list.IsLike}\n");
+            }
+        }
     }
 }
