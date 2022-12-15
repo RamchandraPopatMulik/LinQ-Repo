@@ -16,6 +16,14 @@ namespace Linqe
                 new ProductReview(){ProductID=5,UserID=5,Rating=3,Review="Bad",IsLike=true},
                 new ProductReview(){ProductID=6,UserID=6,Rating=2,Review="Bad",IsLike=true},
                 new ProductReview(){ProductID=7,UserID=7,Rating=5,Review="Good",IsLike=true},
+                 new ProductReview(){ProductID=10,UserID=1,Rating=5,Review="Good",IsLike=true},
+                new ProductReview(){ProductID=10,UserID=2,Rating=4,Review="Good",IsLike=true},
+                new ProductReview(){ProductID=10,UserID=3,Rating=5,Review="Good",IsLike=true},
+                new ProductReview(){ProductID=10,UserID=4,Rating=5,Review="Nice",IsLike=true},
+                new ProductReview(){ProductID=10,UserID=5,Rating=3,Review="Bad",IsLike=true},
+                new ProductReview(){ProductID=10,UserID=6,Rating=2,Review="Bad",IsLike=true},
+                new ProductReview(){ProductID=10,UserID=7,Rating=5,Review="Good",IsLike=true},
+
             };
             foreach(var List in productreviewList)
             {
@@ -28,8 +36,8 @@ namespace Linqe
             //management.RetriveCountOfRecords(productreviewList);
             //management.ProductIDReview(productreviewList);
             //management.SkipTopFive(productreviewList);
-            management.GetAllRecordsWhereMessageNice(productreviewList);
-
+            //management.GetAllRecordsWhereMessageNice(productreviewList);
+            management.RetriveDataWhereId10(productreviewList);
         }
     }
 }

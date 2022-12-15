@@ -88,5 +88,20 @@ namespace Linqe
                                   $" isLike    : {list.IsLike}\n");
             }
         }
+        public void RetriveDataWhereId10(List<ProductReview> productreviewList)
+        {
+            var recordeData = ((from productReview in productreviewList
+                                where (productReview.ProductID == 10)
+                                select productReview
+                              ));
+            foreach (var list in recordeData)
+            {
+                Console.WriteLine($" ProductID : {list.ProductID}\n" +
+                                  $" UserID    : {list.UserID}\n" +
+                                  $" Rating    : {list.Rating}\n" +
+                                  $" Review    : {list.Review}\n" +
+                                  $" isLike    : {list.IsLike}\n");
+            }
+        }
     }
 }
