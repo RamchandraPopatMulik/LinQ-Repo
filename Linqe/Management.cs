@@ -19,11 +19,11 @@ namespace Linqe
                                select productReview).Take(3));
             foreach (var list in recordeData)
             {
-                Console.WriteLine($"ProductID : {list.ProductID}\n" +
-                                  $"UserID    : {list.UserID}\n" +
-                                  $"Rating    : {list.Rating}\n" +
-                                  $"Review    : {list.Review}\n" +
-                                  $"isLike    : {list.IsLike}\n");
+                Console.WriteLine($" ProductID : {list.ProductID}\n" +
+                                  $" UserID    : {list.UserID}\n" +
+                                  $" Rating    : {list.Rating}\n" +
+                                  $" Review    : {list.Review}\n" +
+                                  $" isLike    : {list.IsLike}\n");
             }
         }
         //public void GetAllRecordsByRatingAndId(List<ProductReview> productreviewList)
