@@ -27,7 +27,9 @@ namespace Linqe
             // management.GetAllRecordsByRatingAndId(productreviewList);
             //management.RetriveCountOfRecords(productreviewList);
             //management.ProductIDReview(productreviewList);
-            management.SkipTopFive(productreviewList);
+            //management.SkipTopFive(productreviewList);
+            management.GetAllRecordsWhereMessageNice(productreviewList);
+
         }
     }
 }

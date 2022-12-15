@@ -73,5 +73,20 @@ namespace Linqe
                                    $" isLike    : {list.IsLike}\n");
             }
         }
+        public void GetAllRecordsWhereMessageNice(List<ProductReview> productreviewList)
+        {
+            var recordeData = ((from productReview in productreviewList
+                                where (productReview.Review == "Nice")
+                                select productReview
+                                ));
+            foreach (var list in recordeData)
+            {
+                Console.WriteLine($" ProductID : {list.ProductID}\n" +
+                                  $" UserID    : {list.UserID}\n" +
+                                  $" Rating    : {list.Rating}\n" +
+                                  $" Review    : {list.Review}\n" +
+                                  $" isLike    : {list.IsLike}\n");
+            }
+        }
     }
 }
