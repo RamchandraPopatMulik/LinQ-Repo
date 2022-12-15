@@ -52,5 +52,14 @@ namespace Linqe
                                   $" Count   : {list.Count}\n" );
             }
         }
+        public void ProductIDReview(List<ProductReview> productreviewList)
+        {
+            var recordeData = (from list in productreviewList select new { list.ProductID, list.Review });
+            foreach (var list in recordeData)
+            {
+                Console.WriteLine($" ProductID : {list.ProductID}\n" +
+                                  $" Review  : {list.Review}\n");
+            }
+        }
     }
 }
