@@ -26,11 +26,22 @@ namespace Linqe
                                   $" isLike    : {list.IsLike}\n");
             }
         }
-        //public void GetAllRecordsByRatingAndId(List<ProductReview> productreviewList)
-        //{
-        //    var recordeData = ((from productReview in productreviewList where 
-        //                        ));
-        //    Console.WriteLine(recordeData);
-        //}
+        public void GetAllRecordsByRatingAndId(List<ProductReview> productreviewList)
+        {
+            var recordeData = ((from productReview in productreviewList
+                                where (productReview.ProductID == 1 && productReview.Rating >3 ) || 
+                                (productReview.ProductID == 4 && productReview.Rating > 3) ||
+                                (productReview.ProductID == 4 && productReview.Rating > 3)
+                                select productReview
+                                ));
+            foreach (var list in recordeData)
+            {
+                Console.WriteLine($" ProductID : {list.ProductID}\n" +
+                                  $" UserID    : {list.UserID}\n" +
+                                  $" Rating    : {list.Rating}\n" +
+                                  $" Review    : {list.Review}\n" +
+                                  $" isLike    : {list.IsLike}\n");
+            }
+        }
     }
 }
